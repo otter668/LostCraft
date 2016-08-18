@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LostCraft", "LostCraft\LostCraft.vcxproj", "{B474160F-611C-477C-96FF-B44C3E43A2A0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项目", "解决方案项目", "{3399A6A0-7ABA-4116-B179-4F8E8A6D9AF0}"
+	ProjectSection(SolutionItems) = preProject
+		LostCraft.vsd = LostCraft.vsd
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32

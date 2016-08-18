@@ -24,12 +24,36 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Hero.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenario.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Craftsmanship.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="LostCraft.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Hero.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenario.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Craftsmanship.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

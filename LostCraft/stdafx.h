@@ -15,4 +15,10 @@
 // TODO: 在此处引用程序需要的其他头文件
 #include <iostream>
 #include <string>
+#include <iomanip>
 using namespace std;
+
+#define NUM_CRAFTS 8
+#define PAUSE system("pause")
+#define CLS system("cls")
+#define PC PAUSE;CLS
