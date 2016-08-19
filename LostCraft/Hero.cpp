@@ -76,36 +76,6 @@ int Hero::choice()
 
 void Hero::attack(int index, Monster &mon)
 {
-	//cout << "请选择技能：" << endl;
-	//int attack;
-	//bool retry = false;
-	//do
-	//{
-	//	int numCraft=0;
-	//	do
-	//	{
-	//		for (int i=0;i!=NUM_CRAFTS;i++)
-	//		{
-	//			if (crafts[i].available<=level)
-	//			{
-	//				cout << i+1 << ":" << crafts[i].name << endl;
-	//				numCraft++;
-	//			}
-	//		}
-	//		cin >> attack;
-	//		attack--;
-	//	} while (attack<0||attack>=numCraft);
-	//	if (crafts[attack].action)
-	//	{
-	//		cout << "该技能正在冷却，请稍后使用！" << endl;
-	//		retry = true;
-	//	}
-	//	if (MP-crafts[attack].consumption<0)
-	//	{
-	//		cout << "魔法值不足，请选择其他方式攻击！" << endl;
-	//		retry = true;
-	//	}
-	//}while(retry);
 	mon.HP -= crafts[index].ATK;
 	MP -= crafts[index].consumption;
 	crafts[index].action = crafts[index].cooling + 1;

@@ -1,21 +1,21 @@
 #pragma once
-#include "Hero.h"
-#include "Monster.h"
+#include "InhHero.h"
+#include "InhMonster.h"
 class Scenario
 {
 public:
 	Scenario(void);
 	~Scenario(void);
 
-	Hero myHero;		// 英雄对象
-	Monster myMonster;	// 怪物对象
-	bool state;			// GO（GameOver）标志
-	int round;			// 当前回合
+	InhHero myHero;			// 英雄对象
+	InhMonster myMonster;	// 怪物对象
+	bool state;				// GO（GameOver）标志
+	int round;				// 当前回合
 
 	void initScenario();
-	int choice();
+	InhMonster choice();
 	bool challenge();
-	void showInfo(int, Hero, Monster);
-	void showInfo(string, Hero, Monster);
+	void showInfo(int, InhHero, InhMonster);
+	void showInfo(string, InhHero, InhMonster);
 };
 
