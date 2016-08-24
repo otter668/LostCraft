@@ -76,8 +76,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Craftsmanship.h" />
-    <ClInclude Include="InhHero.h" />
-    <ClInclude Include="InhMonster.h" />
+    <ClInclude Include="Hero.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="Role.h" />
     <ClInclude Include="Scenario.h" />
     <ClInclude Include="stdafx.h" />
@@ -85,8 +85,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Craftsmanship.cpp" />
-    <ClCompile Include="InhHero.cpp" />
-    <ClCompile Include="InhMonster.cpp" />
+    <ClCompile Include="Hero.cpp" />
+    <ClCompile Include="Monster.cpp" />
     <ClCompile Include="LostCraft.cpp" />
     <ClCompile Include="Role.cpp" />
     <ClCompile Include="Scenario.cpp" />

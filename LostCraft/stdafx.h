@@ -18,7 +18,7 @@
 #include <iomanip>
 using namespace std;
 
-#define NUM_CRAFTS 8
+const int NUM_CRAFTS=8;
 #define PAUSE system("pause")
 #define CLS system("cls")
 #define PC PAUSE;CLS

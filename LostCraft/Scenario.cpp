@@ -19,7 +19,7 @@ void Scenario::initScenario()
 	PC;
 }
 
-InhMonster Scenario::choice()
+Monster Scenario::choice()
 {
 	int optional;
 	do
@@ -35,7 +35,7 @@ InhMonster Scenario::choice()
 		cout << setfill('-') << setw(30) << "" << endl;
 		cin >> optional;
 	} while (optional<1 || optional>5);
-	InhMonster mon(optional-1);
+	Monster mon(optional-1);
 	//return --optional;
 	return mon;
 }
@@ -86,7 +86,7 @@ bool Scenario::challenge()
 	}
 }
 
-void Scenario::showInfo(int round, InhHero myHero, InhMonster myMonster)
+void Scenario::showInfo(int round, Hero myHero, Monster myMonster)
 {
 	cout << setfill('-') << setw(39) << "" << endl;
 	cout << "|" << setfill(' ') << setw(34) << "µÚ" << round << "ÂÖ|" << endl;
@@ -97,7 +97,7 @@ void Scenario::showInfo(int round, InhHero myHero, InhMonster myMonster)
 	cout << setfill('-') << setw(39) << "" << endl;
 }
 
-void Scenario::showInfo(string name, InhHero myHero, InhMonster myMonster)
+void Scenario::showInfo(string name, Hero myHero, Monster myMonster)
 {
 	cout << setfill('-') << setw(39) << "" << endl;
 	cout << "|" << setfill(' ') << setw(31) << name << "¹¥»÷£¡|" << endl;

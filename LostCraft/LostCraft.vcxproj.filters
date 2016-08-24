@@ -33,10 +33,10 @@
     <ClInclude Include="Role.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="InhHero.h">
+    <ClInclude Include="Hero.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="InhMonster.h">
+    <ClInclude Include="Monster.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,10 +56,10 @@
     <ClCompile Include="Role.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="InhHero.cpp">
+    <ClCompile Include="Hero.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="InhMonster.cpp">
+    <ClCompile Include="Monster.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

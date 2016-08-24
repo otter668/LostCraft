@@ -1,18 +1,21 @@
 #pragma once
+#include "role.h"
 class Hero;
-class Monster
+const string craftnames[NUM_CRAFTS]={"普通击打","寒冰掌","石破惊雷","赤火焰烧","月蚀镰刀","圣光冲击","天师灵助","天威庇佑"};
+const int availables[NUM_CRAFTS]={1,1,5,10,20,30,35,45};
+const int mps[NUM_CRAFTS] = {0,5,10,20,40,60,80,100};
+const int atks[NUM_CRAFTS] = {10,12,15,18,20,22,25,30};
+const int coolings[NUM_CRAFTS] = {0,1,3,3,4,4,5,5};
+class Monster :
+	public Role
 {
 public:
 	Monster(void);
+	Monster(int);
 	~Monster(void);
 
-	string name;	// 名称
-	int level;		// 级别：初始值为1，为0则死亡失败
-	int HP;			// 生命值：为0则本局失败
-	int ATK;		// 攻击力
-
-	void initMonster(int); 
+	int ATK;
+	
 	void attack(Hero&);
-	bool isAlive();
 };
 

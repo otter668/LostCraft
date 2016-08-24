@@ -1,27 +1,13 @@
 #include "StdAfx.h"
 #include "Hero.h"
+#include "Monster.h"
 
 Hero::Hero(void)
 {
-}
-
-
-Hero::~Hero(void)
-{
-}
-
-void Hero::initHero()
-{
-	cout << "请输入英雄的名字：";
-	cin >> name;
 	level = 1;
 	HP = 2000;
 	MP = 50;
-	string craftnames[NUM_CRAFTS] = {"普通击打","寒冰掌","石破惊雷","赤火焰烧","月蚀镰刀","圣光冲击","天师灵助","天威庇佑"};
-	int availables[NUM_CRAFTS] = {1,1,5,10,20,30,35,45};
-	int mps[NUM_CRAFTS] = {0,5,10,20,40,60,80,100};
-	int atks[NUM_CRAFTS] = {10,12,15,18,20,22,25,30};
-	int coolings[NUM_CRAFTS] = {0,1,3,3,4,4,5,5};
+	
 	for (int i=0;i!=NUM_CRAFTS;i++)
 	{
 		crafts[i].name = craftnames[i];
@@ -31,6 +17,17 @@ void Hero::initHero()
 		crafts[i].cooling = coolings[i];
 		crafts[i].action = 0;
 	}
+}
+
+
+Hero::~Hero(void)
+{
+}
+
+void Hero::setName()
+{
+	cout << "请输入英雄的名字：";
+	cin >> name;
 	cout << "英雄：" << name << "初始化成功！" << endl;
 	PC;
 }
@@ -79,11 +76,6 @@ void Hero::attack(int index, Monster &mon)
 	mon.HP -= crafts[index].ATK;
 	MP -= crafts[index].consumption;
 	crafts[index].action = crafts[index].cooling + 1;
-}
-
-bool Hero::isAlive()
-{
-	return HP>0;
 }
 
 void Hero::levelUp(int up)

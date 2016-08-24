@@ -7,11 +7,7 @@ Monster::Monster(void)
 }
 
 
-Monster::~Monster(void)
-{
-}
-
-void Monster::initMonster(int optional)
+Monster::Monster(int optional)
 {
 	string names[5] = {"°Í¶ûÌ¹³æ¹Ö","¸ñË¹°²Óã¹Ö","Ì©Ë¹Äñ¹Ö","ÂÌÍ·Ô³¹Ö","³àÁú¹Ö(BOSS)"};
 	int levels[5] = {1,5,10,30,50};
@@ -21,12 +17,11 @@ void Monster::initMonster(int optional)
 	ATK = 20 * level;
 }
 
+Monster::~Monster(void)
+{
+}
+
 void Monster::attack(Hero &h)
 {
 	h.HP -= ATK;
-}
-
-bool Monster::isAlive()
-{
-	return HP>0;
 }
