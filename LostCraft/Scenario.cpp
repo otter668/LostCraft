@@ -25,7 +25,7 @@ int Scenario::choice()
 	do
 	{
 		CLS;
-		cout << "ÇëÑ¡ÔñÄãÒªÌôÕ½µÄ¹ÖÊÞ£º" << endl;
+		cout <<right << "ÇëÑ¡ÔñÄãÒªÌôÕ½µÄ¹ÖÊÞ£º" << endl;
 		cout << setfill('-') << setw(30) << "" << endl;
 		cout << "| 1:" << setfill(' ') << setw(26) << "°Í¶ûÌ¹³æ¹Ö¡¾lv1¡¿|" << endl;
 		cout << "| 2:" << setw(26) << "¸ñË¹°²Óã¹Ö¡¾lv5¡¿|" << endl;
@@ -43,8 +43,8 @@ bool Scenario::challenge()
 	while(true)
 	{
 		showInfo(round, myHero, myMonster);
-		int index = myHero.choice();
-		myHero.attack(index, myMonster);
+		myHero.choice();
+		myHero.attack(myMonster);
 		showInfo(myHero.name, myHero, myMonster);
 		if(myMonster.isAlive())
 		{
@@ -86,22 +86,24 @@ bool Scenario::challenge()
 
 void Scenario::showInfo(int round, Hero myHero, Monster myMonster)
 {
+	cout << left << setfill('-') << setw(39) << "" << endl;				// ±í¸ñ¿í¶È¹²¼Æ40¸ö°ë½Ç×Ö·û
+	cout << "|" << setfill(' ') << "µÚ"  << setw(3) << round << "ÂÖ" <<setw(30) << "" << "|" << endl;
 	cout << setfill('-') << setw(39) << "" << endl;
-	cout << "|" << setfill(' ') << setw(34) << "µÚ" << round << "ÂÖ|" << endl;
-	cout << "|" << setw(6) << "Ó¢ÐÛ£º" << setw(12) << myHero.name << "|" << setw(6) << "¹ÖÊÞ£º" << setw(12) << myMonster.name << "|" << endl;
+	cout << "|" << setfill(' ') << setw(6) << "Ó¢ÐÛ£º" << setw(12) << myHero.name << "|" << setw(6) << "¹ÖÊÞ£º" << setw(12) << myMonster.name << "|" << endl;
 	cout << "|" << setw(6) << "¼¶±ð£º" << setw(12) << myHero.level << "|" << setw(6) << "¼¶±ð£º" << setw(12) << myMonster.level << "|" << endl;
 	cout << "|" << setw(6) << "HP£º" << setw(12) << myHero.HP << "|" << setw(6) << "HP£º" << setw(12) << myMonster.HP << "|" << endl;
-	cout << "|" << setw(6) << "MP£º" << setw(12) << myHero.MP << "|" << setw(19) << "|" << endl;
+	cout << "|" << setw(6) << "MP£º" << setw(12) << myHero.MP << "|" << setw(18) << "" << "|" << endl;
 	cout << setfill('-') << setw(39) << "" << endl;
 }
 
 void Scenario::showInfo(string name, Hero myHero, Monster myMonster)
 {
+	cout << left << setfill('-') << setw(39) << "" << endl;				// ±í¸ñ¿í¶È¹²¼Æ40¸ö°ë½Ç×Ö·û
+	cout << "|" << setfill(' ') << setw(12) << name << "¹¥»÷£¡" << setw(19) << "" << "|" << endl;
 	cout << setfill('-') << setw(39) << "" << endl;
-	cout << "|" << setfill(' ') << setw(31) << name << "¹¥»÷£¡|" << endl;
-	cout << "|" << setw(6) << "Ó¢ÐÛ£º" << setw(12) << myHero.name << "|" << setw(6) << "¹ÖÊÞ£º" << setw(12) << myMonster.name << "|" << endl;
+	cout << "|" << setfill(' ') << setw(6) << "Ó¢ÐÛ£º" << setw(12) << myHero.name << "|" << setw(6) << "¹ÖÊÞ£º" << setw(12) << myMonster.name << "|" << endl;
 	cout << "|" << setw(6) << "¼¶±ð£º" << setw(12) << myHero.level << "|" << setw(6) << "¼¶±ð£º" << setw(12) << myMonster.level << "|" << endl;
 	cout << "|" << setw(6) << "HP£º" << setw(12) << myHero.HP << "|" << setw(6) << "HP£º" << setw(12) << myMonster.HP << "|" << endl;
-	cout << "|" << setw(6) << "MP£º" << setw(12) << myHero.MP << "|" << setw(19) << "|" << endl;
+	cout << "|" << setw(6) << "MP£º" << setw(12) << myHero.MP << "|" << setw(18) << "" << "|" << endl;
 	cout << setfill('-') << setw(39) << "" << endl;
 }

@@ -35,7 +35,7 @@ void Hero::initHero()
 	PC;
 }
 
-int Hero::choice()
+void Hero::choice()
 {
 	cout << "请选择技能：" << endl;
 	for (int i=0;i!=NUM_CRAFTS;i++)
@@ -63,7 +63,8 @@ int Hero::choice()
 				cout << "请重新选择技能：" << endl;
 				continue;
 			}
-			return attack-1;
+			iAttack = attack-1;
+			return;
 		}
 		else
 		{
@@ -74,41 +75,11 @@ int Hero::choice()
 	} while (true);
 }
 
-void Hero::attack(int index, Monster &mon)
+void Hero::attack(Monster &mon)
 {
-	//cout << "请选择技能：" << endl;
-	//int attack;
-	//bool retry = false;
-	//do
-	//{
-	//	int numCraft=0;
-	//	do
-	//	{
-	//		for (int i=0;i!=NUM_CRAFTS;i++)
-	//		{
-	//			if (crafts[i].available<=level)
-	//			{
-	//				cout << i+1 << ":" << crafts[i].name << endl;
-	//				numCraft++;
-	//			}
-	//		}
-	//		cin >> attack;
-	//		attack--;
-	//	} while (attack<0||attack>=numCraft);
-	//	if (crafts[attack].action)
-	//	{
-	//		cout << "该技能正在冷却，请稍后使用！" << endl;
-	//		retry = true;
-	//	}
-	//	if (MP-crafts[attack].consumption<0)
-	//	{
-	//		cout << "魔法值不足，请选择其他方式攻击！" << endl;
-	//		retry = true;
-	//	}
-	//}while(retry);
-	mon.HP -= crafts[index].ATK;
-	MP -= crafts[index].consumption;
-	crafts[index].action = crafts[index].cooling + 1;
+	mon.HP -= crafts[iAttack].ATK;
+	MP -= crafts[iAttack].consumption;
+	crafts[iAttack].action = crafts[iAttack].cooling + 1;
 }
 
 bool Hero::isAlive()

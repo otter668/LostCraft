@@ -14,12 +14,13 @@ public:
 	Craftsmanship crafts[NUM_CRAFTS];	// 技能列表
 
 	void initHero();
-	int choice();
-	void attack(int, Monster&);
+	void choice();
+	void attack(Monster&);
 	bool isAlive();
 	void levelUp(int);
 	void levelDown();
 private:
+	int iAttack;
 	void settlement(int level);
 };
 
