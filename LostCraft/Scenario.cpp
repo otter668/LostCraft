@@ -5,7 +5,7 @@
 Scenario::Scenario(void)
 {
 	cout << "==============================" << endl;
-	cout << "====拯救世界吧，少年！v2.0====" << endl;
+	cout << "====拯救世界吧，少年！v3.0====" << endl;
 	cout << "==============================" << endl;
 	PC;
 }
@@ -21,7 +21,7 @@ Monster Scenario::choice()
 	do
 	{
 		CLS;
-		cout << "请选择你要挑战的怪兽：" << endl;
+		cout <<right << "请选择你要挑战的怪兽：" << endl;
 		cout << setfill('-') << setw(30) << "" << endl;
 		cout << "| 1:" << setfill(' ') << setw(26) << "巴尔坦虫怪【lv1】|" << endl;
 		cout << "| 2:" << setw(26) << "格斯安鱼怪【lv5】|" << endl;
