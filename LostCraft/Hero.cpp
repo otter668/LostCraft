@@ -32,7 +32,7 @@ void Hero::setName()
 	PC;
 }
 
-int Hero::choice()
+void Hero::choice()
 {
 	cout << "请选择技能：" << endl;
 	for (int i=0;i!=NUM_CRAFTS;i++)
@@ -60,7 +60,8 @@ int Hero::choice()
 				cout << "请重新选择技能：" << endl;
 				continue;
 			}
-			return attack-1;
+			iAttack = attack-1;
+			return;
 		}
 		else
 		{
@@ -71,11 +72,11 @@ int Hero::choice()
 	} while (true);
 }
 
-void Hero::attack(int index, Monster &mon)
+void Hero::attack(Monster &mon)
 {
-	mon.HP -= crafts[index].ATK;
-	MP -= crafts[index].consumption;
-	crafts[index].action = crafts[index].cooling + 1;
+	mon.HP -= crafts[iAttack].ATK;
+	MP -= crafts[iAttack].consumption;
+	crafts[iAttack].action = crafts[iAttack].cooling + 1;
 }
 
 void Hero::levelUp(int up)
