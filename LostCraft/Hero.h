@@ -13,11 +13,12 @@ public:
 	Craftsmanship crafts[NUM_CRAFTS];
 
 	void setName();
-	int choice();
-	void attack(int, Monster&);
+	void choice();
+	void attack(Role&);
 	void levelUp(int);
 	void levelDown();
 private:
+	int iAttack;
 	void settlement(int level);
 };
 

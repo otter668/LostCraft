@@ -21,7 +21,7 @@ Monster::~Monster(void)
 {
 }
 
-void Monster::attack(Hero &h)
+void Monster::attack(Role &r)
 {
-	h.HP -= ATK;
+	r.HP -= ATK;
 }

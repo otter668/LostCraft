@@ -11,6 +11,11 @@ Role::~Role(void)
 {
 }
 
+void Role::attack(Role& r)
+{
+	return;
+}
+
 bool Role::isAlive()
 {
 	return HP>0;

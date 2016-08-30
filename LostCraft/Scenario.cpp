@@ -4,19 +4,15 @@
 
 Scenario::Scenario(void)
 {
+	cout << "==============================" << endl;
+	cout << "====拯救世界吧，少年！v2.0====" << endl;
+	cout << "==============================" << endl;
+	PC;
 }
 
 
 Scenario::~Scenario(void)
 {
-}
-
-void Scenario::initScenario()
-{
-	cout << "==============================" << endl;
-	cout << "====拯救世界吧，少年！v2.0====" << endl;
-	cout << "==============================" << endl;
-	PC;
 }
 
 Monster Scenario::choice()
@@ -36,7 +32,6 @@ Monster Scenario::choice()
 		cin >> optional;
 	} while (optional<1 || optional>5);
 	Monster mon(optional-1);
-	//return --optional;
 	return mon;
 }
 
@@ -45,8 +40,8 @@ bool Scenario::challenge()
 	while(true)
 	{
 		showInfo(round, myHero, myMonster);
-		int index = myHero.choice();
-		myHero.attack(index, myMonster);
+		myHero.choice();
+		myHero.attack(myMonster);
 		showInfo(myHero.name, myHero, myMonster);
 		if(myMonster.isAlive())
 		{
@@ -88,22 +83,24 @@ bool Scenario::challenge()
 
 void Scenario::showInfo(int round, Hero myHero, Monster myMonster)
 {
+	cout << left << setfill('-') << setw(39) << "" << endl;				// 表格宽度共计40个半角字符
+	cout << "|" << setfill(' ') << "第"  << setw(3) << round << "轮" <<setw(30) << "" << "|" << endl;
 	cout << setfill('-') << setw(39) << "" << endl;
-	cout << "|" << setfill(' ') << setw(34) << "第" << round << "轮|" << endl;
-	cout << "|" << setw(6) << "英雄：" << setw(12) << myHero.name << "|" << setw(6) << "怪兽：" << setw(12) << myMonster.name << "|" << endl;
+	cout << "|" << setfill(' ') << setw(6) << "英雄：" << setw(12) << myHero.name << "|" << setw(6) << "怪兽：" << setw(12) << myMonster.name << "|" << endl;
 	cout << "|" << setw(6) << "级别：" << setw(12) << myHero.level << "|" << setw(6) << "级别：" << setw(12) << myMonster.level << "|" << endl;
 	cout << "|" << setw(6) << "HP：" << setw(12) << myHero.HP << "|" << setw(6) << "HP：" << setw(12) << myMonster.HP << "|" << endl;
-	cout << "|" << setw(6) << "MP：" << setw(12) << myHero.MP << "|" << setw(19) << "|" << endl;
+	cout << "|" << setw(6) << "MP：" << setw(12) << myHero.MP << "|" << setw(18) << "" << "|" << endl;
 	cout << setfill('-') << setw(39) << "" << endl;
 }
 
 void Scenario::showInfo(string name, Hero myHero, Monster myMonster)
 {
+	cout << left << setfill('-') << setw(39) << "" << endl;				// 表格宽度共计40个半角字符
+	cout << "|" << setfill(' ') << setw(12) << name << "攻击！" << setw(19) << "" << "|" << endl;
 	cout << setfill('-') << setw(39) << "" << endl;
-	cout << "|" << setfill(' ') << setw(31) << name << "攻击！|" << endl;
-	cout << "|" << setw(6) << "英雄：" << setw(12) << myHero.name << "|" << setw(6) << "怪兽：" << setw(12) << myMonster.name << "|" << endl;
+	cout << "|" << setfill(' ') << setw(6) << "英雄：" << setw(12) << myHero.name << "|" << setw(6) << "怪兽：" << setw(12) << myMonster.name << "|" << endl;
 	cout << "|" << setw(6) << "级别：" << setw(12) << myHero.level << "|" << setw(6) << "级别：" << setw(12) << myMonster.level << "|" << endl;
 	cout << "|" << setw(6) << "HP：" << setw(12) << myHero.HP << "|" << setw(6) << "HP：" << setw(12) << myMonster.HP << "|" << endl;
-	cout << "|" << setw(6) << "MP：" << setw(12) << myHero.MP << "|" << setw(19) << "|" << endl;
+	cout << "|" << setw(6) << "MP：" << setw(12) << myHero.MP << "|" << setw(18) << "" << "|" << endl;
 	cout << setfill('-') << setw(39) << "" << endl;
 }

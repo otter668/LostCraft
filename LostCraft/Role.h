@@ -8,6 +8,8 @@ public:
 	string name;
 	int level;
 	int HP;
+
+	virtual void attack(Role&);
 	bool isAlive();
 };
 
