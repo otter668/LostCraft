@@ -8,11 +8,10 @@ public:
 	~Scenario(void);
 
 	Hero myHero;			// 英雄对象
-	Monster myMonster;	// 怪物对象
+	Monster myMonster;		// 怪物对象
 	bool state;				// GO（GameOver）标志
 	int round;				// 当前回合
 
-	void initScenario();
 	Monster choice();
 	bool challenge();
 	void showInfo(int, Hero, Monster);

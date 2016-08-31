@@ -4,19 +4,15 @@
 
 Scenario::Scenario(void)
 {
+	cout << "==============================" << endl;
+	cout << "====拯救世界吧，少年！v2.0====" << endl;
+	cout << "==============================" << endl;
+	PC;
 }
 
 
 Scenario::~Scenario(void)
 {
-}
-
-void Scenario::initScenario()
-{
-	cout << "==============================" << endl;
-	cout << "====拯救世界吧，少年！v2.0====" << endl;
-	cout << "==============================" << endl;
-	PC;
 }
 
 Monster Scenario::choice()

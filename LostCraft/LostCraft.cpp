@@ -8,7 +8,6 @@
 int _tmain(int argc, _TCHAR* argv[])
 {
 	Scenario s;
-	s.initScenario();
 	s.myHero.setName();
 	s.state = true;
 	while(s.state)
