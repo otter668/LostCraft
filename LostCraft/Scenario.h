@@ -14,7 +14,7 @@ public:
 
 	Monster choice();
 	bool challenge();
-	void showInfo(int, Hero, Monster);
-	void showInfo(string, Hero, Monster);
+	void showInfo();
+	void showInfo(string);
 };
 
