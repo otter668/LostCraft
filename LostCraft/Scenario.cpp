@@ -39,17 +39,10 @@ bool Scenario::challenge()
 {
 	while(true)
 	{
-<<<<<<< HEAD
-		showInfo(round, myHero, myMonster);
-		myHero.choice();
-		myHero.attack(myMonster);
-		showInfo(myHero.name, myHero, myMonster);
-=======
 		showInfo();
 		myHero.choice();
 		myHero.attack(myMonster);
 		showInfo(myHero.name);
->>>>>>> polymorphism
 		if(myMonster.isAlive())
 		{
 			myMonster.attack(myHero);

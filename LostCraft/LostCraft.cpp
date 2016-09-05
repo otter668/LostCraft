@@ -7,13 +7,8 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-<<<<<<< HEAD
-	Scenario s;
-	s.myHero.setName();
-=======
 	AdvScenario s;
 	((Hero *)s.rHero)->setName();
->>>>>>> polymorphism
 	s.state = true;
 	while(s.state)
 	{

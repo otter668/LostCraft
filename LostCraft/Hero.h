@@ -14,11 +14,7 @@ public:
 
 	void setName();
 	void choice();
-<<<<<<< HEAD
-	void attack(Monster&);
-=======
 	void attack(Role&);
->>>>>>> polymorphism
 	void levelUp(int);
 	void levelDown();
 private:
