@@ -72,9 +72,15 @@ void Hero::choice()
 	} while (true);
 }
 
+<<<<<<< HEAD
 void Hero::attack(Monster &mon)
 {
 	mon.HP -= crafts[iAttack].ATK;
+=======
+void Hero::attack(Role &r)
+{
+	r.HP -= crafts[iAttack].ATK;
+>>>>>>> polymorphism
 	MP -= crafts[iAttack].consumption;
 	crafts[iAttack].action = crafts[iAttack].cooling + 1;
 }

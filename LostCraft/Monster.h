@@ -12,6 +12,6 @@ public:
 
 	int ATK;
 	
-	void attack(Hero&);
+	void attack(Role&);
 };
 

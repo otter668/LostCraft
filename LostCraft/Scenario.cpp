@@ -39,14 +39,21 @@ bool Scenario::challenge()
 {
 	while(true)
 	{
+<<<<<<< HEAD
 		showInfo(round, myHero, myMonster);
 		myHero.choice();
 		myHero.attack(myMonster);
 		showInfo(myHero.name, myHero, myMonster);
+=======
+		showInfo();
+		myHero.choice();
+		myHero.attack(myMonster);
+		showInfo(myHero.name);
+>>>>>>> polymorphism
 		if(myMonster.isAlive())
 		{
 			myMonster.attack(myHero);
-			showInfo(myMonster.name, myHero, myMonster);
+			showInfo(myMonster.name);
 			if (!myHero.isAlive())
 			{
 				myHero.levelDown();
@@ -81,7 +88,7 @@ bool Scenario::challenge()
 	}
 }
 
-void Scenario::showInfo(int round, Hero myHero, Monster myMonster)
+void Scenario::showInfo()
 {
 	cout << left << setfill('-') << setw(39) << "" << endl;				// 表格宽度共计40个半角字符
 	cout << "|" << setfill(' ') << "第"  << setw(3) << round << "轮" <<setw(30) << "" << "|" << endl;
@@ -93,7 +100,7 @@ void Scenario::showInfo(int round, Hero myHero, Monster myMonster)
 	cout << setfill('-') << setw(39) << "" << endl;
 }
 
-void Scenario::showInfo(string name, Hero myHero, Monster myMonster)
+void Scenario::showInfo(string name)
 {
 	cout << left << setfill('-') << setw(39) << "" << endl;				// 表格宽度共计40个半角字符
 	cout << "|" << setfill(' ') << setw(12) << name << "攻击！" << setw(19) << "" << "|" << endl;

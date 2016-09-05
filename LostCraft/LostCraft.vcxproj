@@ -72,9 +72,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdvScenario.h" />
     <ClInclude Include="Craftsmanship.h" />
     <ClInclude Include="Hero.h" />
     <ClInclude Include="Monster.h" />
@@ -84,6 +86,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AdvScenario.cpp" />
     <ClCompile Include="Craftsmanship.cpp" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="Monster.cpp" />
