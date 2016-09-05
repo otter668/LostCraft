@@ -7,8 +7,8 @@ public:
 	AdvScenario(void);
 	~AdvScenario(void);
 
-	Role *rHero;			// 英雄对象
-	Role *rMonster;			// 怪物对象
+	Role *rHero;			// 英雄的对象指针
+	Role *rMonster;			// 怪物的对象指针
 
 	void choice();
 	bool challenge();

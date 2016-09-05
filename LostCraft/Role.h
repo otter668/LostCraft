@@ -9,7 +9,7 @@ public:
 	int level;
 	int HP;
 
-	virtual void attack(Role&);
+	virtual void attack(Role&)=0;
 	bool isAlive();
 };
 
